@@ -67,16 +67,34 @@ button {
   border-radius: 10px;
 }
 
-.progress-container {
-  height: 75%;
-  flex-basis: 55rem;
-  background-color: hsl(228, 56%, 26%);
-  border-radius: 10px;
+.storage-range {
+  display: flex;
+  flex: 0 0 30%;
+  justify-content: space-between;
+  width: 100%;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .main {
     background-image: url(/images/bg-mobile.svg);
     background-size: cover;
+  }
+
+  .ui {
+    flex-direction: column;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+  }
+
+  .controls-container {
+    width: 95%;
+    max-height: 55%;
+  }
+  
+  .progress-container {
+    width: 95%;
+    max-height: 35%;
   }
 }

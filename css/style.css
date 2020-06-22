@@ -58,16 +58,28 @@ button {
   background-color: #0c122c;
   border-radius: 10px; }
 
-.progress-container {
-  height: 75%;
-  flex-basis: 55rem;
-  background-color: #1d2c67;
-  border-radius: 10px; }
+.storage-range {
+  display: flex;
+  flex: 0 0 30%;
+  justify-content: space-between;
+  width: 100%; }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .main {
     background-image: url(/images/bg-mobile.svg);
-    background-size: cover; } }
+    background-size: cover; }
+  .ui {
+    flex-direction: column;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem; }
+  .controls-container {
+    width: 95%;
+    max-height: 55%; }
+  .progress-container {
+    width: 95%;
+    max-height: 35%; } }
 
 body {
   font-family: "Raleway", sans-serif;
@@ -82,3 +94,77 @@ body {
   right: 0; }
   .attribution a {
     color: #3e52a3; }
+
+.text--bold {
+  font-weight: 700; }
+
+.text--grey {
+  color: #aaa; }
+
+.text--large {
+  font-size: 3.5rem;
+  color: #000; }
+
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 75%;
+  flex-basis: 55rem;
+  background-color: #1d2c67;
+  border-radius: 10px;
+  padding: 3rem;
+  font-size: 1.4rem;
+  color: #dddbff;
+  position: relative; }
+  .progress-container__usage-note {
+    flex: 0 0 30%; }
+  .progress-container__progress-bar {
+    display: flex;
+    align-items: center;
+    flex: 0 0 20%;
+    width: 100%;
+    background-color: #0c122c;
+    border-radius: 50px;
+    position: relative; }
+  .progress-container__progress-bar::before {
+    content: '';
+    position: absolute;
+    left: 78.5%;
+    width: 1.2rem;
+    height: 1.2rem;
+    z-index: 2;
+    background: #fff;
+    border-radius: 10px; }
+  .progress-container__progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 81%;
+    z-index: 1;
+    background: linear-gradient(to right, #ffa399, #ff4d97);
+    border-radius: 50px; }
+  .progress-container__callout {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 3rem;
+    height: 7rem;
+    width: 18rem;
+    border: 2px solid #fff;
+    background-color: #fff;
+    border-radius: 15px 15px 0 15px;
+    transform: translateY(-70%); }
+  .progress-container__callout::after {
+    content: '';
+    position: absolute;
+    top: 90%;
+    right: -2px;
+    width: 0;
+    height: 0;
+    border-top: 30px solid white;
+    border-left: 30px solid transparent; }
