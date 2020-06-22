@@ -4,11 +4,11 @@
   justify-content: space-between;
   height: 75%;
   flex-basis: 55rem;
-  background-color: hsl(228, 56%, 26%);
+  background-color: $medium-blue;
   border-radius: 10px;
   padding: 3rem;
   font-size: 1.4rem;
-  color: hsl(243, 100%, 93%);
+  color: $pale-blue;
   position: relative;
 
   &__usage-note {
@@ -20,7 +20,7 @@
     align-items: center;
     flex: 0 0 20%;
     width: 100%;
-    background-color: #0c122c;
+    background-color: $dark-blue;
     border-radius: 50px;
     position: relative;
   }
@@ -70,13 +70,24 @@
     right: -2px;
     width: 0;
     height: 0;
-    border-top: 30px solid white;
+    border-top: 30px solid #fff;
     border-left: 30px solid transparent;
   }
+}
 
+@media screen and (max-width: 900px) {
+  .progress-container {
+    &__callout {
+      top: 100%;
+      left: 50%;
+      bottom: 0;
+      right: 0;
+      border-radius: 15px;
+      transform: translate(-50%, -50%);
+    }
 
-
-
-
-
+    &__callout::after {
+      all: initial;
+    }
+  } 
 }
